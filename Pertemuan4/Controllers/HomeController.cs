@@ -67,6 +67,8 @@ namespace Pertemuan4.Controllers
         {
             List<BookLoans> Loans = new List<BookLoans>();
             List<Book_Model> Books = new List<Book_Model>();
+            List<Book_Model> Books1 = new List<Book_Model>();
+            List<Book_Model> Books2 = new List<Book_Model>();
             Books.Add(new Book_Model()
             {
                 Id = 1,
@@ -82,6 +84,30 @@ namespace Pertemuan4.Controllers
                 Price = 1000
             });
 
+            Books1.Add(new Book_Model()
+            {
+                Id = 4,
+                Judul = "One Hundred Years of Solitude by Gabriel Garcia Marquez",
+                Sinopsis = "One of the 20th century's enduring works, One Hundred Years of Solitude is a widely beloved and acclaimed novel known throughout the world, and the ultimate achievement in a Nobel Prize–winning car...",
+                Price = 1000
+            });
+
+            Books1.Add(new Book_Model()
+            {
+                Id = 3,
+                Judul = "Don Quixote by Miguel de Cervantes",
+                Sinopsis = "Alonso Quixano, a retired country gentleman in his fifties, lives in an unnamed section of La Mancha with his niece and a housekeeper. He has become obsessed with books of chivalry, and believes th...",
+                Price = 1000
+            });
+
+            Books2.Add(new Book_Model()
+            {
+                Id = 5,
+                Judul = "The Great Gatsby by F. Scott Fitzgerald",
+                Sinopsis = "The novel chronicles an era that Fitzgerald himself dubbed the 'Jazz Age'. Following the shock and chaos of World War I, American society enjoyed unprecedented levels of prosperity during the roar...",
+                Price = 1000
+            });
+
             Loans.Add(new BookLoans()
             {
                 IdLoan = 1,
@@ -89,8 +115,22 @@ namespace Pertemuan4.Controllers
                 nama = "Oliver",
                 books = Books
             });
-            //Loans.Add(new BookLoans() { IdLoan = 2, npm = 1924882, nama = "Harry", IdBook = 2, Judul = "Ulysses by James Joyce", Price = 1000 });
-            //Loans.Add(new BookLoans() { IdLoan = 3, npm = 2038744, nama = "Ella", IdBook = 1, Judul = "In Search of Lost Time by Marcel Proust", Price = 1000 });
+
+            Loans.Add(new BookLoans()
+            {
+                IdLoan = 2,
+                npm = 1931887,
+                nama = "Mary",
+                books = Books1
+            });
+
+            Loans.Add(new BookLoans()
+            {
+                IdLoan = 2,
+                npm = 1942987,
+                nama = "Mary",
+                books = Books2
+            });
 
             return Loans;
         }
